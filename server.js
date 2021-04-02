@@ -7,6 +7,8 @@ const postsRoute = require("./routes/api/posts");
 const profileRoute = require("./routes/api/profile");
 
 connectDB();
+// Init middleware
+app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => {
   res.send("API running");
@@ -24,4 +26,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log("Server started on port " + PORT);
 });
-``;
