@@ -52,7 +52,6 @@ const ProfileSchema = new mongoose.Schema({
       },
       current: {
         desc: Boolean,
-        default: false,
       },
       description: {
         type: String,
